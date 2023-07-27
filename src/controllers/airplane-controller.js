@@ -2,11 +2,11 @@ const {StatusCodes}=require('http-status-codes');
 
 const{AirplaneService}=require('../services');
 
-const{SuccessResponse,ErrorResponse}=require('../utils/common/index');
+const{SuccessResponse,ErrorResponse}=require('../utils/common');
 
 /**
  * POST : /airplanes 
- * req-body {modelNumber: 'airbus320', capacity: 200}
+ * req-body {ModelNumber: 'airbus320', Capacity: 200}
  */
 
 async function createAirplane(req,res){
