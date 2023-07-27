@@ -1,3 +1,4 @@
+const { StatusCodes } = require('http-status-codes');
 const { Logger } = require('../config');
 
 class CrudRepository {

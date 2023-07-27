@@ -10,6 +10,7 @@ const{SuccessResponse,ErrorResponse}=require('../utils/common/index');
  */
 
 async function createAirplane(req,res){
+    console.log("Inside controller")
      try{
         const airplane=await AirplaneService.createAirplane({
             ModelNumber: req.body.ModelNumber,
@@ -22,7 +23,7 @@ async function createAirplane(req,res){
      }catch(error){
         ErrorResponse.error=error;
         return res
-                 .status(error.statuscode)
+                 .status(error.statusCode)
                  .json(ErrorResponse);
      }
 }

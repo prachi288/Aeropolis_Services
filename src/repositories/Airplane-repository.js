@@ -3,6 +3,7 @@ const Airplane=require('../models');
 
 class AirplaneRepository extends CrudRepository{
     constructor(){
+        console.log("Inside repo")
         super(Airplane);
     }
 }

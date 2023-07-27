@@ -2,13 +2,12 @@ const {StatusCodes}=require('http-status-codes');
 
 const {AirplaneRepository}=require('../repositories');
 
-const{}=require('../utils/error/app-error');
-const { response } = require('express');
 const AppError = require('../utils/error/app-error');
 
 const airplaneRepository=new AirplaneRepository();
 
 async function createAirplane(data){
+    console.log("inside services")
     try{
         const airplane=await airplaneRepository.create(data);
         return airplane;
@@ -20,7 +19,7 @@ async function createAirplane(data){
             });
             throw new AppError(explanation,StatusCodes.BAD_REQUEST);
         }
-        throw new AppError('Cannot create a new Airplance object', StatusCodes.INTERNAL_SERVER_ERROR);
+        throw new AppError('Cannot create a new Airplane object', StatusCodes.INTERNAL_SERVER_ERROR);
     }
 }
 
