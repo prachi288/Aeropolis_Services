@@ -35,7 +35,7 @@ async function createAirport(req,res){
  */
 
 async function getAirports(req,res){
-    console.log("Inside controller")
+    console.log("Inside  Airport controller")
      try{
         const airports=await AirportService.getAirports()
         SuccessResponse.data= airports;

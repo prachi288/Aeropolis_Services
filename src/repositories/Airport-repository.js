@@ -3,7 +3,7 @@ const {Airport}=require('../models');
 
 class AirportRepository extends CrudRepository{
     constructor(){
-        console.log("Inside repo")
+        console.log("Inside airport repo")
         super(Airport);
     }
 }

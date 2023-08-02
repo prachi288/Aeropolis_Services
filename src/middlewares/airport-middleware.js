@@ -4,7 +4,7 @@ const { ErrorResponse } = require('../utils/common');
 const AppError = require('../utils/error/app-error');
 
 function validateCreateRequest(req, res, next) {
-    console.log("inside middleware")
+    console.log("inside airport middleware")
     if(!req.body.name) {
         ErrorResponse.message = 'Something went wrong while creating airport';
         ErrorResponse.error = new AppError(['name not found in the oncoming request in the correct form'], StatusCodes.BAD_REQUEST);

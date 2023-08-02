@@ -10,7 +10,7 @@ const{SuccessResponse,ErrorResponse}=require('../utils/common');
  */
 
 async function createCity(req,res){
-    console.log("Inside controller")
+    console.log("Inside city controller")
      try{
         const city=await CityService.createCity({
             name:req.body.name

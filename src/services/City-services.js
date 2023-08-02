@@ -7,7 +7,7 @@ const AppError = require('../utils/error/app-error');
 const cityRepository=new CityRepository();
 
 async function createCity(data){
-    console.log("inside services")
+    console.log("inside city services")
     try{
         const city=await cityRepository.create(data);
         return city;
