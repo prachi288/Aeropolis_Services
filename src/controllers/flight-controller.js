@@ -46,35 +46,15 @@ async function createFlight(req,res){
 }
 
 /**
- * GET : /flights 
- */
-
-async function getFlights(req,res){
-    console.log("Inside flight controller")
-     try{
-        const flights=await FlightService.getFlights()
-        SuccessResponse.data= flights;
-        return res
-                .status(StatusCodes.OK)
-                .json(SuccessResponse);
-     }catch(error){
-        ErrorResponse.error=error;
-        return res
-                 .status(error.statusCode)
-                 .json(ErrorResponse);
-     }
-}
-
-/**
- * POST : /flights/:id 
+ * POST : /flights 
  * req-body {}
  */
-async function getFlight(req, res) {
+async function getAllFlight(req, res) {
     try {
-        const flights = await FlightService.getFlight(req.params.id);
+        const flights = await FlightService.getAllFlight(req.query);
         SuccessResponse.data = flights;
         return res
-                .status(StatusCodes.OK)
+                .status(StatusCodes.CREATED)
                 .json(SuccessResponse);
     } catch(error) {
         ErrorResponse.error = error;
@@ -105,7 +85,6 @@ async function deleteFlight(req, res) {
 
 module.exports={
     createFlight,
-    getFlights,
-    getFlight,
+    getAllFlight,
     deleteFlight
 }

@@ -9,15 +9,11 @@ const router=express.Router();
 // /api/v1/flights POST
 router.post('/', 
         FlightMiddleware.validateCreateRequest,
-        FlightController.createFlight);
-
-// /api/v1/flights GET
-router.get('/', 
-        FlightController.getFlights);  
+        FlightController.createFlight); 
         
-// /api/v1/flights/id GET
-router.get('/:id', 
-        FlightController.getFlight); 
+// /api/v1/flights?trips=MUM-DEL GET
+router.get('/', 
+        FlightController.getAllFlight); 
         
 // /api/v1/flights/id DELETE
 router.delete('/:id', 
