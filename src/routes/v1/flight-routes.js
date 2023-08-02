@@ -11,7 +11,7 @@ router.post('/',
         FlightMiddleware.validateCreateRequest,
         FlightController.createFlight); 
         
-// /api/v1/flights?trips=MUM-DEL GET
+// /api/v1/flights?trips=DEL-MUM GET
 router.get('/', 
         FlightController.getAllFlight); 
         

@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'arrivalAirportId',
         as: 'arrivalAirport',
       });
-    }
+    };
   }
   Flight.init({
     flightNumber:{

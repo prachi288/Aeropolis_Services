@@ -20,7 +20,7 @@ const{SuccessResponse,ErrorResponse}=require('../utils/common');
  */
 
 async function createFlight(req,res){
-    console.log("Inside flight controller")
+    console.log("Inside controller")
      try{
         const flight=await FlightService.createFlight({
             flightNumber: req.body.flightNumber,

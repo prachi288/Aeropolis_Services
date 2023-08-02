@@ -4,7 +4,7 @@ const { Flight, Airplane, Airport,City} = require('../models');
 
 class FlightRepository extends CrudRepository{
     constructor(){
-        console.log("Inside airport repo")
+        console.log("Inside flight repo")
         super(Flight);
     }
 

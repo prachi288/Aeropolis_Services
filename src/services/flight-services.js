@@ -7,7 +7,7 @@ const AppError = require('../utils/error/app-error');
 const flightRepository=new FlightRepository();
 
 async function createFlight(data){
-    console.log("inside flight services")
+    console.log("inside services")
     try{
         const flight=await flightRepository.create(data);
         return flight;
